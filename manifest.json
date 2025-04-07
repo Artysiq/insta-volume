@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Insta Volume",
+  "version": "1.0",
+  "description": "Instagram Volume control",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.instagram.com/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 
